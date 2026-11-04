@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>이건우 — 이커머스 MD</title>
+<meta name="description" content="쇼핑몰을 키워 매각까지 해본 이커머스 MD. 반복 업무는 AI로 없앱니다.">
+<meta property="og:title" content="이건우 — 이커머스 MD">
+<meta property="og:description" content="월 순매출 31배 성장 · 11개 채널 운영 · AI 업무자동화 앱 출시">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141414'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23cdb88f' font-family='sans-serif' font-weight='700'%3E이%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --ink: #1c1b19; --paper: #f1efe9; --card: #fbfaf7; --line: #d6d2c8;
+    --muted: #5d5a54; --gold: #8a7350; --gold-l: #cdb88f;
+    --dark: #141414; --dark-card: #1b1a18; --dark-line: #3a3833; --dark-muted: #a9a59c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Pretendard, -apple-system, 'Malgun Gothic', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; word-break: keep-all; }
+  a { color: inherit; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 72px 0; }
+  .dark { background: var(--dark); color: var(--paper); }
+  .eyebrow { font-size: 13px; letter-spacing: .24em; font-weight: 600; color: var(--gold); }
+  .dark .eyebrow { color: var(--gold-l); }
+  h1 { font-size: clamp(34px, 8vw, 56px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; margin-top: 14px; }
+  h2 { font-size: clamp(26px, 6vw, 40px); line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; margin-top: 12px; }
+  .lead { font-size: clamp(17px, 4vw, 20px); color: var(--dark-muted); margin-top: 16px; }
+  .sub { font-size: 17px; color: var(--muted); margin-top: 12px; }
+  .dark .sub { color: var(--dark-muted); }
+
+  /* hero */
+  .hero { padding: 88px 0 72px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .btn.primary { background: var(--gold-l); color: var(--dark); }
+  .btn.ghost { border: 1px solid var(--dark-line); color: var(--paper); }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 48px; }
+  .stat { border-top: 1px solid var(--dark-line); padding-top: 14px; }
+  .stat b { display: block; font-size: clamp(26px, 6vw, 36px); letter-spacing: -0.02em; color: var(--gold-l); }
+  .stat span { font-size: 14px; color: var(--dark-muted); }
+  @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+
+  /* timeline */
+  .tl { margin-top: 32px; border-top: 2px solid var(--ink); }
+  .tl-row { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .tl-date { font-size: 14px; color: var(--gold); font-weight: 500; }
+  .tl-title { font-size: 20px; font-weight: 700; }
+  .tl-desc { font-size: 15px; color: var(--muted); }
+  .tl-row ul { margin-top: 8px; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .tl-row li { margin: 3px 0; }
+  @media (min-width: 720px) { .tl-row { grid-template-columns: 180px 1fr; gap: 24px; } }
+
+  /* how */
+  .steps { display: grid; gap: 28px; margin-top: 40px; }
+  .step { border-top: 1px solid var(--paper); padding-top: 18px; }
+  .step.now { border-top-color: var(--gold-l); }
+  .step .when { font-size: 14px; color: var(--dark-muted); }
+  .step.now .when, .step.now .after { color: var(--gold-l); }
+  .step h3 { font-size: 21px; margin-top: 6px; }
+  .step .before { font-size: 15px; color: var(--dark-muted); margin-top: 10px; }
+  .step .after { font-size: 16px; margin-top: 4px; }
+  @media (min-width: 720px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+
+  /* works */
+  .works { display: grid; gap: 16px; margin-top: 32px; }
+  .work { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; }
+  .work.hero-card { border-color: var(--ink); }
+  .icon { width: 52px; height: 52px; border-radius: 13px; background: var(--ink); color: var(--gold-l); padding: 13px; }
+  .icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .work h3 { font-size: 22px; margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .badge { font-size: 12px; font-weight: 600; background: var(--gold); color: var(--paper); border-radius: 999px; padding: 4px 10px; }
+  .why { font-size: 15px; color: var(--gold); font-weight: 600; margin-top: 6px; }
+  .flow { display: grid; gap: 6px; margin-top: 18px; }
+  .flow div { font-size: 15px; background: #efece5; border-radius: 8px; padding: 9px 12px; }
+  .flow div.end { background: var(--ink); color: var(--paper); font-weight: 600; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .facts b { display: block; font-size: 24px; letter-spacing: -0.02em; }
+  .facts span { font-size: 14px; color: var(--muted); }
+  .work .link { display: inline-block; margin-top: 18px; font-weight: 600; font-size: 15px; text-underline-offset: 4px; }
+  @media (min-width: 720px) { .works { grid-template-columns: 1.4fr 1fr; } .flow.row { grid-template-columns: repeat(3, 1fr); } .flow.row div { text-align: center; } }
+
+  /* skills */
+  .groups { display: grid; gap: 16px; margin-top: 32px; }
+  .group { border: 1px solid var(--dark-line); border-radius: 14px; padding: 24px; background: var(--dark-card); }
+  .group.ai { border-color: var(--gold-l); }
+  .group h3 { font-size: 19px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chips span { font-size: 14px; border: 1px solid var(--dark-line); border-radius: 999px; padding: 6px 12px; color: #e4e0d6; }
+  .group.ai .chips span { border-color: #6b5d43; color: var(--gold-l); }
+  .certs { margin-top: 28px; font-size: 15px; color: var(--dark-muted); }
+  .certs a { color: var(--paper); text-underline-offset: 3px; }
+  @media (min-width: 720px) { .groups { grid-template-columns: repeat(3, 1fr); } }
+
+  /* contact */
+  .contact { text-align: center; padding: 80px 0; }
+  .contact .btns { justify-content: center; }
+  footer { text-align: center; font-size: 13px; color: var(--dark-muted); padding: 0 0 40px; background: var(--dark); }
+</style>
+</head>
+<body>
+
+<header class="dark hero">
+  <div class="wrap">
+    <div class="eyebrow">E-COMMERCE MD · 이건우</div>
+    <h1>팔아본 MD,<br>그리고 반복 업무를<br>AI로 없애는 MD</h1>
+    <p class="lead">쇼핑몰을 직접 만들고, 키우고, 매각까지 해봤습니다.<br>지금은 반복되는 일을 AI 도구로 직접 자동화합니다.</p>
+    <div class="btns">
+      <a class="btn primary" href="files/leegunwoo-portfolio.pdf" target="_blank" rel="noopener">포트폴리오 PDF 보기</a>
+      <a class="btn ghost" href="mailto:rjsdn253@naver.com">이메일 보내기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>31배</b><span>월 순매출 57만 원에서 1,781만 원으로</span></div>
+      <div class="stat"><b>11개</b><span>판매채널 1인 동시 운영</span></div>
+      <div class="stat"><b>1위</b><span>에이블리 기획전 주간 랭킹</span></div>
+      <div class="stat"><b>64만</b><span>릴스 3편 누적 조회</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">CAREER</div>
+    <h2>경력</h2>
+    <div class="tl">
+      <div class="tl-row">
+        <div class="tl-date">2025.08 – 현재</div>
+        <div><div class="tl-title">AI 업무자동화 프로젝트</div><div class="tl-desc">Claude Code로 앱 개발·Google Play 출시, SEO 웹사이트 구축·운영</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2025.01 – 2025.07</div>
+        <div><div class="tl-title">㈜와이에스디엔씨 · 대리</div><div class="tl-desc">상업시설 MD 기획, F&amp;B·리테일 브랜드 입점 협상</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2023.01 – 2024.12</div>
+        <div><div class="tl-title">써멀스톤 · 대표</div><div class="tl-desc">젠더리스 주얼리 브랜드 창업 · 운영 · 매각</div>
+          <ul>
+            <li>월 순매출 57만 원(2023.02)에서 1,781만 원(2023.07)으로 성장, 이후 월 1,000~2,000만 원 유지</li>
+            <li>광고가 정체되자 인플루언서·릴스로 전환, 릴스 3편 누적 조회 64만</li>
+            <li>카페24 자사몰 중심 11개 채널 운영, 네이버 리뷰 4.81(80건)</li>
+            <li>원가 상승과 저가 상품 유입을 보고 주문이 늘던 2024.11 매각</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2020.01 – 2023.01</div>
+        <div><div class="tl-title">베키룸 · 팀장</div><div class="tl-desc">여성의류 쇼핑몰 물류 총괄 · 기획전 운영</div>
+          <ul>
+            <li>에이블리 기획전·프로모션 설계로 주간 랭킹 1위</li>
+            <li>수천 개 SKU 입출고·재고 관리(ERP·WMS)</li>
+            <li>거래처 수기 정산·주문서 엑셀 양식화, 포장·동선 표준화로 물류비 절감</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2018.10 – 2019.10</div>
+        <div><div class="tl-title">㈜한국프리마 · 주임</div><div class="tl-desc">재개발·재건축 조합 행정 지원, 총회 운영</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow">HOW I WORK</div>
+    <h2>반복은 견디지 않고, 없앱니다</h2>
+    <p class="sub">같은 일을 두 번 하게 되면, 세 번째부터는 안 해도 되는 방법을 찾습니다.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="when">2020 – 2023 · 베키룸</div>
+        <h3>수기 작업을 엑셀로</h3>
+        <div class="before">거래처별 수기 정산·주문서, 흩어진 자료</div>
+        <div class="after">엑셀 양식화와 자료 통합으로 업무 속도 향상</div>
+      </div>
+      <div class="step">
+        <div class="when">2023 – 2024 · 써멀스톤</div>
+        <h3>운영을 통합</h3>
+        <div class="before">채널마다 따로 하던 주문·CS</div>
+        <div class="after">통합관리로 혼자 11개 채널 운영</div>
+      </div>
+      <div class="step now">
+        <div class="when">2025 – 현재 · AI</div>
+        <h3>도구를 직접 만듦</h3>
+        <div class="before">손으로 하던 글쓰기·사진 정리·페이지 제작</div>
+        <div class="after">Claude Code로 앱 개발, 스토어 출시</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">WHAT I BUILT</div>
+    <h2>그렇게 만든 것들</h2>
+    <div class="works">
+      <div class="work hero-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
+        <h3>현장카메라 앱 <span class="badge">Google Play 출시</span></h3>
+        <div class="why">사진 정리와 블로그 글쓰기, 매번 반복되는 두 가지를 없애려고</div>
+        <div class="flow row">
+          <div>찍고 말로 기록</div>
+          <div>사진 자동 정리</div>
+          <div class="end">AI 글 작성 · 발행</div>
+        </div>
+        <div class="facts">
+          <div><b>4,750장</b><span>사진 분석으로 병목 확인 후 기획</span></div>
+          <div><b>1인</b><span>기획 · 개발 · 스토어 등록 · 심사 대응</span></div>
+        </div>
+        <a class="link" href="https://play.google.com/store/apps/details?id=kr.mmmd.hyeonjang" target="_blank" rel="noopener">Google Play에서 보기 ↗</a>
+      </div>
+      <div class="work">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h3>SEO 웹사이트</h3>
+        <div class="why">페이지를 매번 손으로 만들기 싫어서</div>
+        <div class="flow">
+          <div>흩어진 사진 · 기초자료</div>
+          <div>자동 분류 (공사 · 지역 · 건물)</div>
+          <div class="end">상세페이지 자동 생성 · 108건 운영</div>
+        </div>
+        <a class="link" href="https://doljipsa.com" target="_blank" rel="noopener">doljipsa.com ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow">SKILL SET</div>
+    <h2>직접 다뤄본 도구들</h2>
+    <div class="groups">
+      <div class="group">
+        <h3>커머스 운영</h3>
+        <div class="chips"><span>카페24</span><span>스마트스토어</span><span>쿠팡</span><span>에이블리</span><span>지그재그</span><span>ERP · WMS</span><span>주문 통합관리</span><span>엑셀</span></div>
+      </div>
+      <div class="group">
+        <h3>콘텐츠 · 마케팅</h3>
+        <div class="chips"><span>포토샵</span><span>일러스트레이터</span><span>제품 촬영 · 보정</span><span>상세페이지</span><span>릴스 · 숏폼</span><span>인플루언서</span><span>키워드 광고</span><span>SEO</span></div>
+      </div>
+      <div class="group ai">
+        <h3>AI · 자동화</h3>
+        <div class="chips"><span>Claude Code</span><span>ChatGPT</span><span>Claude</span><span>Playwright</span><span>Astro · Vercel</span><span>Android 앱 출시</span><span>Google Drive API</span></div>
+      </div>
+    </div>
+    <p class="certs">자격 · 수료 — GTQi 일러스트 1급 · 초경량비행장치 조종자 1종 ·
+      <a href="files/anthropic-ai-fluency.pdf" target="_blank" rel="noopener">Anthropic AI Fluency</a> ·
+      <a href="files/huggingface-agents-course.pdf" target="_blank" rel="noopener">HuggingFace Agents Course</a></p>
+  </div>
+</section>
+
+<section class="dark contact">
+  <div class="wrap">
+    <div class="eyebrow">CONTACT</div>
+    <h2>함께 일할 기회를 기다립니다</h2>
+    <p class="sub">rjsdn253@naver.com</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:rjsdn253@naver.com">이메일 보내기</a>
+      <a class="btn ghost" href="files/leegunwoo-portfolio.pdf" target="_blank" rel="noopener">포트폴리오 PDF</a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 이건우</footer>
+
+</body>
+</html>
